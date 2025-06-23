@@ -1,66 +1,28 @@
-// pages/profile/profile.js
+// profile.js
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    userName: '',
+    avatarUrl: ''
   },
+  onGetUserInfo(e) {
+    const userInfo = e.detail.userInfo;
+    this.setData({
+      userName: userInfo.nickName,
+      avatarUrl: userInfo.avatarUrl
+    });
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage() {
-
+    // 可在此发起 POST 请求到后端保存
+    wx.request({
+      url: 'http://127.0.0.1:8000/submit-profile',
+      method: 'POST',
+      data: {
+        userName: userInfo.nickName,
+        avatarUrl: userInfo.avatarUrl,
+        beautyScore: 85 // 假设这里来自皮肤分析结果
+      },
+      success: res => {
+        console.log('提交成功:', res);
+      }
+    });
   }
-})
+});

@@ -15,3 +15,7 @@
 - 后端：FastAPI（Python）
 - AI 分析：OpenCV + TensorFlow
 - 数据库：MySQL
+
+<img width="344" alt="image" src="https://github.com/user-attachments/assets/d41199b1-7bae-4eca-84c9-c29fa554b867" />
+
+<img width="364" alt="image" src="https://github.com/user-attachments/assets/94319653-d9b2-49e9-a4d3-318635c58382" />

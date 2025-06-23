@@ -1,20 +1,3 @@
-<!-- <view class="container">
-  <view class="header">
-    <text class="title">Scan your body</text>
-    <text class="subtitle">Follow the instructions to get the best results</text>
-  </view>
-
-  <image class="illustration" src="/assets/scan-body.png" mode="aspectFit" />
-
-  <camera device-position="front" flash="off" class="camera">
-    <cover-view class="camera-overlay">
-      <cover-view class="face-frame"></cover-view>
-      <cover-view class="camera-tips">Use Camera</cover-view>
-    </cover-view>
-  </camera>
-  <button class="btn-upload" bindtap="handleUpload">Upload Photo</button>
-</view> -->
-
 <view class="photo-section" wx:if="{{!imageSrc && !showCamera}}">
   <view class="title">Smart Skin Analysis</view>
   <view class="subtitle">AI analyzes your skin and provides personalized skincare advice</view>
@@ -29,7 +12,7 @@
   </view>
 </view>
 
-<!-- Camera Interface -->
+
 <view class="camera-container" wx:if="{{showCamera}}">
   <camera device-position="front" flash="off" class="camera">
     <cover-view class="camera-overlay">
@@ -43,7 +26,7 @@
   </view>
 </view>
 
-<!-- Loading State -->
+
 <view class="loading-container" wx:if="{{loading}}">
   <image class="preview-image" src="{{imageSrc}}"></image>
   <view class="loading-content">
@@ -53,11 +36,10 @@
   </view>
 </view>
 
-<!-- Analysis Result -->
+
 <view class="result-container" wx:if="{{analysisResult && !loading}}">
   <image class="result-image" src="{{imageSrc}}"></image>
 
-  <!-- Overall Score -->
   <view class="score-section">
     <view class="score-title">Skin Health Score</view>
     <view class="score-circle">
@@ -65,5 +47,15 @@
       <text class="score-unit">pts</text>
     </view>
     <view class="skin-type">Your Skin Type: {{analysisResult.skinType}}</view>
+  </view>
+
+  <view class="container">
+    <button bindtap="chooseImage">Upload Face Photo</button>
+    <image wx:if="{{imageSrc}}" src="{{imageSrc}}" mode="aspectFit" class="preview-img" />
+    <button wx:if="{{imageSrc}}" bindtap="analyzeImage">Analyze</button>
+    <view wx:if="{{result}}">
+      <text>Analysis Result:</text>
+      <text>{{result}}</text>
+    </view>
   </view>
 </view>
