@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="greeting">
+    <text>Good morning, {{userName}}!</text>
+  </view>
+
+  <view class="profile-box">
+    <image class="avatar" src="{{avatarUrl}}" mode="aspectFill" />
+    <view class="score-text">Your Beauty Score</view>
+    <text class="score">{{beautyScore}}/100</text>
+    <text class="timestamp">Updated {{lastUpdated}}</text>
+  </view>
+
+  <button class="tips-button" bindtap="handleViewTips">View Today’s Tips</button>
+
+  <view class="explore-title">Explore</view>
+  <view class="explore-section">
+    <view class="explore-item">
+      <image src="/assets/fashion.jpg" class="explore-img" />
+      <text class="title">Fashion Finds</text>
+      <text class="desc">Discover the latest trends</text>
+    </view>
+    <view class="explore-item">
+      <image src="/assets/beauty.jpg" class="explore-img" />
+      <text class="title">Beauty Essentials</text>
+      <text class="desc">Must-have beauty picks</text>
+    </view>
+  </view>
+
+</view>

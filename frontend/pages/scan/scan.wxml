@@ -1,0 +1,69 @@
+<!-- <view class="container">
+  <view class="header">
+    <text class="title">Scan your body</text>
+    <text class="subtitle">Follow the instructions to get the best results</text>
+  </view>
+
+  <image class="illustration" src="/assets/scan-body.png" mode="aspectFit" />
+
+  <camera device-position="front" flash="off" class="camera">
+    <cover-view class="camera-overlay">
+      <cover-view class="face-frame"></cover-view>
+      <cover-view class="camera-tips">Use Camera</cover-view>
+    </cover-view>
+  </camera>
+  <button class="btn-upload" bindtap="handleUpload">Upload Photo</button>
+</view> -->
+
+<view class="photo-section" wx:if="{{!imageSrc && !showCamera}}">
+  <view class="title">Smart Skin Analysis</view>
+  <view class="subtitle">AI analyzes your skin and provides personalized skincare advice</view>
+
+  <view class="action-buttons">
+    <button class="photo-btn primary" bindtap="startCamera">
+      Scan via Camera
+    </button>
+    <button class="photo-btn secondary" bindtap="chooseImage">
+      Choose from Album
+    </button>
+  </view>
+</view>
+
+<!-- Camera Interface -->
+<view class="camera-container" wx:if="{{showCamera}}">
+  <camera device-position="front" flash="off" class="camera">
+    <cover-view class="camera-overlay">
+      <cover-view class="face-frame"></cover-view>
+      <cover-view class="camera-tips">Please align your face within the frame</cover-view>
+    </cover-view>
+  </camera>
+  <view class="camera-controls">
+    <button class="take-photo-btn" bindtap="takePhoto">Take Photo</button>
+    <button class="cancel-btn" bindtap="reAnalyze">Cancel</button>
+  </view>
+</view>
+
+<!-- Loading State -->
+<view class="loading-container" wx:if="{{loading}}">
+  <image class="preview-image" src="{{imageSrc}}"></image>
+  <view class="loading-content">
+    <view class="loading-spinner"></view>
+    <text class="loading-text">AI is analyzing your skin...</text>
+    <text class="loading-detail">Please wait a few seconds while we process your analysis</text>
+  </view>
+</view>
+
+<!-- Analysis Result -->
+<view class="result-container" wx:if="{{analysisResult && !loading}}">
+  <image class="result-image" src="{{imageSrc}}"></image>
+
+  <!-- Overall Score -->
+  <view class="score-section">
+    <view class="score-title">Skin Health Score</view>
+    <view class="score-circle">
+      <text class="score-number">{{analysisResult.overallScore}}</text>
+      <text class="score-unit">pts</text>
+    </view>
+    <view class="skin-type">Your Skin Type: {{analysisResult.skinType}}</view>
+  </view>
+</view>

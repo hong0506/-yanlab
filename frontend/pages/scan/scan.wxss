@@ -1,0 +1,525 @@
+/* .container {
+  padding: 70px 24rpx 0;
+  text-align: center;
+}
+
+.title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #888;
+  margin-bottom: 48rpx;
+}
+
+.illustration {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 16rpx;
+  margin-bottom: 48rpx;
+}
+
+.btn-camera {
+  background-color: #e9a3b2;
+  color: white;
+  border-radius: 35rpx;
+  font-size: 30rpx;
+  margin-bottom: 24rpx;
+  padding: 24rpx 0;
+}
+
+.btn-upload {
+  background-color: #f3e2eb;
+  color: #333;
+  border-radius: 35rpx;
+  font-size: 30rpx;
+  padding: 24rpx 0;
+}
+
+.camera {
+  width: 100%;
+  height: 100%;
+}
+
+.camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.face-frame {
+  width: 400rpx;
+  height: 500rpx;
+  border: 4rpx solid rgba(255, 255, 255, 0.8);
+  border-radius: 200rpx;
+  border-style: dashed;
+}
+
+.camera-tips {
+  color: white;
+  font-size: 28rpx;
+  margin-top: 40rpx;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20rpx 40rpx;
+  border-radius: 40rpx;
+} */
+
+.container {
+  padding: 40rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* .user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+  padding: 30rpx;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20rpx;
+  backdrop-filter: blur(10px);
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-right: 20rpx;
+}
+
+.nickname {
+  color: white;
+  font-size: 32rpx;
+  font-weight: 500;
+} */
+
+.login-btn {
+  background: linear-gradient(45deg, #FF6B6B, #FF8E8E);
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 30rpx 60rpx;
+  font-size: 32rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.main-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30rpx;
+  padding: 60rpx 40rpx;
+  backdrop-filter: blur(20px);
+}
+
+.photo-section {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 80rpx;
+  line-height: 1.5;
+  margin: 0 24px 24px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.photo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  border: none;
+}
+
+.photo-btn.primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.photo-btn.secondary {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border: 2rpx solid #667eea;
+}
+
+.btn-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.camera-container {
+  position: relative;
+  height: 800rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.camera {
+  width: 100%;
+  height: 100%;
+}
+
+.camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.face-frame {
+  width: 400rpx;
+  height: 500rpx;
+  border: 4rpx solid rgba(255, 255, 255, 0.8);
+  border-radius: 200rpx;
+  border-style: dashed;
+}
+
+.camera-tips {
+  color: white;
+  font-size: 28rpx;
+  margin-top: 40rpx;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20rpx 40rpx;
+  border-radius: 40rpx;
+}
+
+.camera-controls {
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.take-photo-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 30rpx 60rpx;
+  font-size: 32rpx;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 30rpx 60rpx;
+  font-size: 32rpx;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.preview-image {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 150rpx;
+  margin: 0 auto 40rpx;
+  display: block;
+}
+
+.loading-content {
+  padding: 40rpx;
+}
+
+.loading-spinner {
+  width: 60rpx;
+  height: 60rpx;
+  border: 4rpx solid #f3f3f3;
+  border-top: 4rpx solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 30rpx;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  display: block;
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.loading-detail {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.result-container {
+  text-align: center;
+}
+
+.result-image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  margin: 0 auto 40rpx;
+  display: block;
+}
+
+.score-section {
+  margin-bottom: 50rpx;
+  padding: 40rpx;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 20rpx;
+  color: white;
+}
+
+.score-title {
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+}
+
+.score-circle {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.score-number {
+  font-size: 80rpx;
+  font-weight: bold;
+}
+
+.score-unit {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.skin-type {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.section-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+  text-align: left;
+}
+
+.issues-section {
+  margin-bottom: 50rpx;
+}
+
+.issue-item {
+  background: #f8f9fa;
+  padding: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+  text-align: left;
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.issue-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.severity {
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: white;
+}
+
+.severity-1 {
+  background: #28a745;
+}
+
+.severity-2 {
+  background: #ffc107;
+}
+
+.severity-3 {
+  background: #dc3545;
+}
+
+.issue-desc {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.4;
+}
+
+.routine-section {
+  margin-bottom: 40rpx;
+}
+
+.routine-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20rpx;
+  text-align: left;
+}
+
+.routine-item {
+  margin-bottom: 15rpx;
+  text-align: left;
+}
+
+.routine-step {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+.products-section {
+  margin-bottom: 40rpx;
+}
+
+.products-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20rpx;
+  text-align: left;
+}
+
+.products-scroll {
+  white-space: nowrap;
+  padding-bottom: 20rpx;
+}
+
+.product-item {
+  display: inline-block;
+  width: 280rpx;
+  background: white;
+  border-radius: 15rpx;
+  padding: 30rpx;
+  margin-right: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  vertical-align: top;
+  white-space: normal;
+}
+
+.product-image-placeholder {
+  width: 100%;
+  height: 150rpx;
+  background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.product-info {
+  text-align: left;
+  margin-bottom: 20rpx;
+}
+
+.product-name {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.product-brand {
+  display: block;
+  font-size: 24rpx;
+  color: #667eea;
+  margin-bottom: 10rpx;
+}
+
+.product-price {
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 10rpx;
+}
+
+.product-desc {
+  display: block;
+  font-size: 22rpx;
+  color: #666;
+  line-height: 1.4;
+}
+
+.buy-btn {
+  width: 100%;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 25rpx;
+  padding: 20rpx;
+  font-size: 26rpx;
+}
+
+.action-section {
+  display: flex;
+  gap: 30rpx;
+  margin-top: 50rpx;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 30rpx;
+  border-radius: 25rpx;
+  font-size: 30rpx;
+  border: none;
+}
+
+.action-btn.primary {
+  background: #667eea;
+  color: white;
+}
+
+.action-btn.secondary {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}

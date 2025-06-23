@@ -1,0 +1,10 @@
+<view class="custom-nav">
+  <view class="back-icon" bindtap="goBack">←</view>
+  <view class="title">Today's Tips</view>
+</view>
+
+<view class="tips-container">
+  <view class="tip-item" wx:for="{{tips}}" wx:key="index">
+    <text>{{item}}</text>
+  </view>
+</view>

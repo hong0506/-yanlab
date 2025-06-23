@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/tips/tips",
+    "pages/scan/scan",
+    "pages/routine/routine",
+    "pages/explore/explore",
+    "pages/profile/profile"
+  ],
+  "tabBar": {
+    "color": "#8B5C6E",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/scan/scan",
+        "text": "Scan",
+        "iconPath": "assets/icons/scan.png",
+        "selectedIconPath": "assets/icons/scan-active.png"
+      },
+      {
+        "pagePath": "pages/routine/routine",
+        "text": "Routine",
+        "iconPath": "assets/icons/routine.png",
+        "selectedIconPath": "assets/icons/routine-active.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "Explore",
+        "iconPath": "assets/icons/explore.png",
+        "selectedIconPath": "assets/icons/explore-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "Profile",
+        "iconPath": "assets/icons/profile.png",
+        "selectedIconPath": "assets/icons/profile-active.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationStyle": "default",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#667eea",
+    "navigationBarTitleText": "颜究院",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f9fa"
+  },
+  "permission": {
+    "scope.camera": {
+      "desc": "需要使用相机进行皮肤检测"
+    }
+  },
+  "style": "v2",
+  "renderer": "skyline",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "defaultContentBox": true,
+      "tagNameStyleIsolation": "legacy",
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
